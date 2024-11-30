@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JDM Hub - Image Gallery</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="globals.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner-container">
+      <nav>
+          <a href="#" id="homeLink">Home</a>
+          <a href="contact.html" id="contactLink">Contact</a>
+          <a href="about.html" id="about-link">About Us</a>
+      </nav>
+  
+      <div class="container">
+        <h1 class="tittle">Welcome to JDM Hub</h1>
+        <p class="paragraph">JDM culture (Japanese Domestic Market culture) refers to the automotive subculture centered
+          around vehicles that are specifically manufactured for the Japanese market, as well as the modifications
+          and style preferences that stem from Japan's car scene. It encompasses a wide range of practices, including
+          vehicle styling, performance tuning, and car meets, all of which have grown into an international phenomenon,
+          especially in the United States, Europe, and parts of Asia.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="gallery-container">
+    <div class="gallery-item" onclick="openModal(0)"></div>
+    <div class="gallery-item" onclick="openModal(1)"></div>
+    <div class="gallery-item" onclick="openModal(2)"></div>
+    <div class="gallery-item" onclick="openModal(3)"></div>
+    <div class="gallery-item" onclick="openModal(4)"></div>
+    <div class="gallery-item" onclick="openModal(5)"></div>
+    <div class="gallery-item" onclick="openModal(6)"></div>
+    <div class="gallery-item" onclick="openModal(7)"></div>
+    <div class="gallery-item" onclick="openModal(8)"></div>
+    <div class="gallery-item" onclick="openModal(9)"></div>
+  </div>
+  
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-preview-image">
+      <div class="close-preview" onclick="">&times;</div>
+      <img src="/jdm/2.jpg" alt="Preview image">
+    </div>
+    <div class="modal-content">
+      <div class="modal-image-container">
+        <img class="modal-image" src="/jdm/1.jpeg" id="modalImage" alt="Modal Image">
+      </div>
+      <div class="modal-image-container">
+        <img class="modal-image" src="/jdm/4.jpg" id="modalImage" alt="Modal Image">
+      </div>
+      <div class="modal-image-container">
+        <img class="modal-image" src="/jdm/2.jpg" id="modalImage" alt="Modal Image">
+      </div>
+      <div class="modal-image-container">
+        <img class="modal-image" src="/jdm/3.webp" id="modalImage" alt="Modal Image">
+      </div>
+    </div>
+    <div id="caption"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

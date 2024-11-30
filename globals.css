@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(26, 26, 26);
+  color: white;
+}  
+
+header nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    backdrop-filter: 20px;
+}
+
+header nav a
+{
+  color: wheat;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+  
+}

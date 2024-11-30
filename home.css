@@ -1,0 +1,199 @@
+
+
+
+header {
+  background-image: url('/jdm/hero-bg.jpeg');
+  background-size: cover;  /* Ensures the image covers the header's exact size */
+  background-position: center;  /* Centers the image inside the header */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
+}
+
+.header-inner-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 40px 0;  /* Adjust the padding as needed */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centers content in both axes (optional) */
+  width: 100%;  /* Ensures the header spans the full width */
+  height: 400px;  /* Set a fixed height for the header */
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title{
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.paragraph{
+  font-size: 16px;
+  line-height: 28px;
+  margin-top: 1rem;
+  width: 70%;
+  text-align: center;
+}
+
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  aspect-ratio: 8 / 7;
+}
+
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* .gallery-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+} */
+
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery-item:nth-of-type(1)::before { background-image: url('/jdm/1.jpeg') }
+.gallery-item:nth-of-type(2)::before { background-image: url('/jdm/2.jpg') }
+.gallery-item:nth-of-type(3)::before { background-image: url('/jdm/3.webp') }
+.gallery-item:nth-of-type(4)::before { background-image: url('/jdm/4.jpg') }
+.gallery-item:nth-of-type(5)::before { background-image: url('/jdm/5.webp') }
+.gallery-item:nth-of-type(6)::before { background-image: url('/jdm/6.jpg') }
+.gallery-item:nth-of-type(7)::before { background-image: url('/jdm/7.jpg') }
+.gallery-item:nth-of-type(8)::before { background-image: url('/jdm/8.jpg') }
+.gallery-item:nth-of-type(9)::before { background-image: url('/jdm/9.jpg') }
+.gallery-item:nth-of-type(10)::before { background-image: url('/jdm/10.jpg') }
+
+.gallery-item:hover::before {
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  overflow: auto;
+  padding: 20px;
+  padding-bottom: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2vh;
+  width: 60%;
+  max-width: 900px;
+}
+
+.modal-image-container {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3/2;
+  max-width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.modal-image-container:hover {
+  transform: translateY(-5px);
+}
+
+.modal-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#caption {
+  color: #ddd;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  width: 60%;
+}
+
+.modal-preview-image {
+  width: 100%;
+  transition: transform 0.3s ease;
+  /* display: grid; */
+  display: none;
+  position: relative;
+  place-items: center;
+  border-radius: 8px;
+  width: 60%;
+  cursor: pointer;
+}
+
+.modal-preview-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.close-preview {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 28px;
+  background: rgba(0, 0, 0, 0.6);
+  height: 35px;
+  width: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 9999px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ddd;
+  text-decoration: none;
+  cursor: pointer;
+}
